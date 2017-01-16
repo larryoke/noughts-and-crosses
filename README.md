@@ -41,12 +41,13 @@ Requires Maven version 3.x and Java 8 JDK
 	**Request**<br />
 	POST /mark <br />
 	Content-Type: application/json<br />
-	
-	{<br />
-		"gameID":{gameID}<br />
-		"currentPlayer":{X|O}<br />
-		"selectedSquare":{1..9}<br />
-	}<br />
+	```javascript
+	{
+		"gameID":{gameID}
+		"currentPlayer":{X|O}
+		"selectedSquare":{1..9}
+	}
+	```
 	
 	**Response**<br />
 	Success<br />
