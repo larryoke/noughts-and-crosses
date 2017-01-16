@@ -16,14 +16,14 @@ Requires Maven version 3.x and Java 8 JDK
 
 	Initialise a new game on the server
 	
-	Request
-	GET /initialise 
-	Accept: aplication/json
+	Request<br />
+	GET /initialise <br />
+	Accept: aplication/json<br />
 	
-	Response
-	Success
-	 200 OK
-	{gameID}
+	Response<br />
+	Success<br />
+	 200 OK<br />
+	{gameID}<br />
 	
 2. Process current mark
 	
