@@ -27,7 +27,7 @@ Requires Maven version 3.x and Java 8 JDK
 	
 2. Process current mark
 	 
-	###Request<br />
+	Request<br />
 	POST /mark <br />
 	Content-Type: application/json<br />
 	
