@@ -39,9 +39,10 @@ Requires Maven version 3.x and Java 8 JDK
 2. Process current mark and return a mark status to client
 	 
 	**Request**<br />
+	
+	```javascript
 	POST /mark <br />
 	Content-Type: application/json<br />
-	```javascript
 	{
 		"gameID":{gameID}
 		"currentPlayer":{X|O}
