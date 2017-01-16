@@ -1,3 +1,0 @@
-#logging.level.org.apache.http=DEBUG
-3#logging.level.org.springframework.web=DEBUG
-server.tomcat.accesslog.directory=/Users/larryoke/spring-boot-tomcat-logs

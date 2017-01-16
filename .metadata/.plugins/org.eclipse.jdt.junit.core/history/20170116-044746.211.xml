@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun gameClient.GameClientApplicationTest" project="gameClient" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="gameClient.GameClientApplicationTest" time="32.698">
-    <testcase name="verifyRestTemplate_methodCalls_where_XPlayerWinsBy3SquaresOnTopRow" classname="gameClient.GameClientApplicationTest" time="32.688"/>
-    <testcase name="verifyRestTemplate_methodCalls_where_XPlayerDraws" classname="gameClient.GameClientApplicationTest" time="0.007"/>
-    <testcase name="testQuitGameOnInitialCommandLinePrompt" classname="gameClient.GameClientApplicationTest" time="0.003"/>
-  </testsuite>
-</testrun>

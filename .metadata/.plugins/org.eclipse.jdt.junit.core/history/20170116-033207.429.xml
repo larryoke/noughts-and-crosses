@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun gameService.GameRestControllerTest" project="gameService" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="gameService.GameRestControllerTest" time="0.364">
-    <testcase name="testHorizontalTopRowWinByPlayerX" classname="gameService.GameRestControllerTest" time="0.267"/>
-    <testcase name="testHorizontalTopRowWinByPlayerY" classname="gameService.GameRestControllerTest" time="0.043"/>
-    <testcase name="testDuplicateSquareMarking_BadRequest" classname="gameService.GameRestControllerTest" time="0.021"/>
-    <testcase name="testDiagonalWinByPlayerX" classname="gameService.GameRestControllerTest" time="0.033"/>
-  </testsuite>
-</testrun>

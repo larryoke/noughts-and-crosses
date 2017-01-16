@@ -1,3 +1,0 @@
-spring.main.web-environment=false
-
-logging.level.org.apache.http=DEBUG

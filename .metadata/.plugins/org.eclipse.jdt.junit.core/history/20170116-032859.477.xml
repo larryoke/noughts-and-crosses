@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun gameService.GameRestControllerTest" project="gameService" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="gameService.GameRestControllerTest" time="0.332">
-    <testcase name="testHorizontalTopRowWinByPlayerX" classname="gameService.GameRestControllerTest" time="0.253"/>
-    <testcase name="testHorizontalTopRowWinByPlayerY" classname="gameService.GameRestControllerTest" time="0.04"/>
-    <testcase name="testDiagonalWinByPlayerX" classname="gameService.GameRestControllerTest" time="0.039"/>
-  </testsuite>
-</testrun>

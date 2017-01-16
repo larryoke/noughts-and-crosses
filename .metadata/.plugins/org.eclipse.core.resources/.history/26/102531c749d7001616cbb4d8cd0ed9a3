@@ -1,5 +1,0 @@
-package gameService.service;
-
-public interface GameService {
-
-}

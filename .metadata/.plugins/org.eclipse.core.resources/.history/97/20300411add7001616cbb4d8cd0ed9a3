@@ -1,8 +1,0 @@
-package gameCommon;
-
-import gameClient.view.Player;
-
-public class Play {
-    private int gameID;
-    private Player currentPlayer = Player.X;
-}

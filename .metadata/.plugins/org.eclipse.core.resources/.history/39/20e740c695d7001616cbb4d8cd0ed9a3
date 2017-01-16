@@ -1,5 +1,0 @@
-package gameCommon;
-
-public class GameProperties {
-	public static final String NEW_GAME_URI = "http://localhost:8080/initialise";
-}

@@ -1,9 +1,0 @@
-package gameClient;
-
-public class GameClientApplicationTest {
-
-    public GameClientApplicationTest() {
-	// TODO Auto-generated constructor stub
-    }
-
-}

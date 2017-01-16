@@ -1,9 +1,0 @@
-package gameService;
-
-public class GameRestControllerTest {
-
-    public GameRestControllerTest() {
-	// TODO Auto-generated constructor stub
-    }
-
-}

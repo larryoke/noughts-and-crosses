@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun gameService.GameRestControllerTest" project="gameService" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="gameService.GameRestControllerTest" time="53.592">
-    <testcase name="test" classname="gameService.GameRestControllerTest" time="53.592"/>
-  </testsuite>
-</testrun>
