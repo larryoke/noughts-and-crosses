@@ -1,0 +1,13 @@
+#OS
+*.DS_Store
+
+#Class files
+*.class
+
+#Eclipse
+**/.settings
+*.project
+*.classpath
+
+#maven
+**/target
