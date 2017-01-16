@@ -28,9 +28,10 @@ Requires Maven version 3.x and Java 8 JDK
 1.	Initialise a new game on the server and return a new game ID
 	
 	**Request**<br />
-	GET /initialise <br />
-	Accept: aplication/json<br />
-	
+	```javascript
+	GET /initialise 
+	Accept: aplication/json
+	```
 	**Response**<br />
 	Success<br />
 	 200 OK<br />
@@ -41,8 +42,8 @@ Requires Maven version 3.x and Java 8 JDK
 	**Request**<br />
 	
 	```javascript
-	POST /mark <br />
-	Content-Type: application/json<br />
+	POST /mark 
+	Content-Type: application/json
 	{
 		"gameID":{gameID}
 		"currentPlayer":{X|O}
@@ -52,14 +53,16 @@ Requires Maven version 3.x and Java 8 JDK
 	
 	**Response**<br />
 	Success<br />
-	200 OK<br />
-	Content-Type: application/json<br />
+	```javascript
+	200 OK
+	Content-Type: application/json
 	
-	{<br />
-		"markStatus":{CONTINUE|WIN|DRAW}<br />
-		"errorMessage":<br />
-		"scroreMessage":{scoreMessage}<br />
-	}<br />
+	{
+		"markStatus":{CONTINUE|WIN|DRAW}
+		"errorMessage":
+		"scroreMessage":{scoreMessage}
+	}
+	```
 	
 	Errors<br />
 	400 Bad Request<br />
