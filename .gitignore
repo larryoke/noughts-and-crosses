@@ -6,6 +6,8 @@
 
 #Eclipse
 **/.settings
+*.metadata
+*.recommenders
 *.project
 *.classpath
 
