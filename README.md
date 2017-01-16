@@ -33,9 +33,11 @@ Requires Maven version 3.x and Java 8 JDK
 	Accept: aplication/json
 	```
 	**Response**<br />
-	Success<br />
+	Success
+	```javascript
 	 200 OK<br />
 	{gameID}<br />
+	```
 	
 2. Process current mark and return a mark status to client
 	 
@@ -52,7 +54,7 @@ Requires Maven version 3.x and Java 8 JDK
 	```
 	
 	**Response**<br />
-	Success<br />
+	Success
 	```javascript
 	200 OK
 	Content-Type: application/json
