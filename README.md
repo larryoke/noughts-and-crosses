@@ -2,7 +2,7 @@
 This project is an implementation of the Nought and Crosses Game Service.
 Please find the details at https://github.com/michaeldfallen/coding-tests/blob/master/Noughts_and_crosses.md.
 
-#Prerequisite
+##Prerequisite
 Requires Maven version 3.x and Java 8 JDK
 
 ##Installation
