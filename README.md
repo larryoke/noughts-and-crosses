@@ -11,23 +11,34 @@ Requires Maven version 3.x and Java 8 JDK
 3. From this folder build with command 'mvn clean install'
 
 
-##Usage (A brief description of the RESTful API)
-1.	
-
-	Initialise a new game on the server
+##Start Up
+1. Go to noughts-and-crosses/GameService and run the command below to start the game server
+	java -jar target/gameService-0.0.1-SNAPSHOT.jar
 	
-	Request<br />
+	
+2. Go to noughts-and-crosses/GameClient and run the command below to start a game instance for Players X and O
+	java -jar target/gameClient-0.0.1-SNAPSHOT.jar
+	
+	Simply follow further instructions
+	
+
+
+
+##Usage (A brief description of the RESTful API)
+1.	Initialise a new game on the server
+	
+	**Request**<br />
 	GET /initialise <br />
 	Accept: aplication/json<br />
 	
-	Response<br />
+	**Response**<br />
 	Success<br />
 	 200 OK<br />
 	{gameID}<br />
 	
 2. Process current mark
 	 
-	Request<br />
+	**Request**<br />
 	POST /mark <br />
 	Content-Type: application/json<br />
 	
@@ -37,7 +48,7 @@ Requires Maven version 3.x and Java 8 JDK
 		"selectedSquare":{1..9}<br />
 	}<br />
 	
-	Response<br />
+	**Response**<br />
 	Success<br />
 	200 OK<br />
 	Content-Type: application/json<br />
@@ -58,20 +69,9 @@ Requires Maven version 3.x and Java 8 JDK
 	}<br />
 	If the mark square is already occupied<br />
 	
-	
-3. End game
 
-  	Request<br />
+	
+3. End the game (clean-up)
+
+  	**Request**<br />
   	DELETE /end/{gameID} <br />
-
-
-##Start Up
-1. Go to noughts-and-crosses/GameService and run the command below to start the game server
-	java -jar target/gameService-0.0.1-SNAPSHOT.jar
-	
-	
-2. Go to noughts-and-crosses/GameClient and run the command below to start a game instance for Players X and O
-	java -jar target/gameClient-0.0.1-SNAPSHOT.jar
-	
-	Simply follow further instructions
-
