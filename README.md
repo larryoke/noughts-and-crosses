@@ -35,8 +35,8 @@ Requires Maven version 3.x and Java 8 JDK
 	**Response**<br />
 	Success
 	```javascript
-	 200 OK<br />
-	{gameID}<br />
+	 200 OK
+	{gameID}
 	```
 	
 2. Process current mark and return a mark status to client
@@ -67,13 +67,15 @@ Requires Maven version 3.x and Java 8 JDK
 	```
 	
 	Errors<br />
-	400 Bad Request<br />
-	Content-Type: application/json<br />
-	{<br />
-		"markStatus":ERROR<br />
-		"errorMessage":"This square is already marked"<br />
-		"scroreMessage":<br />
-	}<br />
+	```javascript
+	400 Bad Request
+	Content-Type: application/json
+	{
+		"markStatus":ERROR
+		"errorMessage":"This square is already marked"
+		"scroreMessage":
+	}
+	```
 	If the mark square is already occupied<br />
 	
 
@@ -81,4 +83,6 @@ Requires Maven version 3.x and Java 8 JDK
 3. End the game (clean-up) to remove the game cache
 
   	**Request**<br />
-  	DELETE /end/{gameID} <br />
+	```javascript
+  	DELETE /end/{gameID}
+  	```
