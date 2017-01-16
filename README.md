@@ -8,7 +8,7 @@ Requires Maven version 3.x and Java 8 JDK
 ##Installation
 1. Download larryoke/noughts-and-crosses
 2. Find downloaded noughts-and-crosses-master and change directory to noughts-and-crosses folder
-3. From this folder build with command 'mvn clean install'
+3. From this folder build with command 'mvn clean package'
 
 
 ##Start Up
@@ -25,7 +25,7 @@ Requires Maven version 3.x and Java 8 JDK
 
 
 ##Usage (A brief description of the RESTful API)
-1.	Initialise a new game on the server
+1.	Initialise a new game on the server and return a new game ID
 	
 	**Request**<br />
 	GET /initialise <br />
@@ -36,7 +36,7 @@ Requires Maven version 3.x and Java 8 JDK
 	 200 OK<br />
 	{gameID}<br />
 	
-2. Process current mark
+2. Process current mark and return a mark status to client
 	 
 	**Request**<br />
 	POST /mark <br />
@@ -71,7 +71,7 @@ Requires Maven version 3.x and Java 8 JDK
 	
 
 	
-3. End the game (clean-up)
+3. End the game (clean-up) to remove the game cache
 
   	**Request**<br />
   	DELETE /end/{gameID} <br />
