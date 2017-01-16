@@ -12,13 +12,13 @@ Requires Maven version 3.x and Java 8 JDK
 
 
 ##Start Up
-1. Go to noughts-and-crosses/GameService and run the command below to start the game server
-	java -jar target/gameService-0.0.1-SNAPSHOT.jar
+1. Go to noughts-and-crosses/GameService and run the command below to start the game server<br />
+	java -jar target/gameService-0.0.1-SNAPSHOT.jar<br />
 	
 	
-2. Go to noughts-and-crosses/GameClient and run the command below to start a game instance for Players X and O
-	java -jar target/gameClient-0.0.1-SNAPSHOT.jar
-	
+2. Go to noughts-and-crosses/GameClient and run the command below to start a game instance for Players X and O<br />
+	java -jar target/gameClient-0.0.1-SNAPSHOT.jar<br />
+	<br />
 	Simply follow further instructions
 	
 
