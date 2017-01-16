@@ -26,8 +26,8 @@ Requires Maven version 3.x and Java 8 JDK
 	{gameID}<br />
 	
 2. Process current mark
-	<span style="color: green"> 
-	Request<br />
+	 
+	###Request<br />
 	POST /mark <br />
 	Content-Type: application/json<br />
 	
@@ -57,7 +57,7 @@ Requires Maven version 3.x and Java 8 JDK
 		"scroreMessage":<br />
 	}<br />
 	If the mark square is already occupied<br />
-	</span>
+	
 	
 3. End game
 
