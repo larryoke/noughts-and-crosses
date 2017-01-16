@@ -1,0 +1,59 @@
+package gameClient.view;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import gameCommon.Square;
+
+public class Board2 {
+
+    private Square square1 = Square.ONE;
+    private Square square2 = Square.TWO;
+    private Square square3 = Square.THREE;
+    private Square square4 = Square.FOUR;
+    private Square square5 = Square.FIVE;
+    private Square square6 = Square.SIX;
+    private Square square7 = Square.SEVEN;
+    private Square square8 = Square.EIGHT;
+    private Square square9 = Square.NINE;
+
+    private Set<Square> xPlays = new HashSet<Square>();
+    private Set<Square> oPlays = new HashSet<Square>();
+
+    @Override
+    public String toString() {
+
+	return " \n =======\n |" + getCurrentCellValue(square1) + "|" + getCurrentCellValue(square2) + "|"
+		+ getCurrentCellValue(square3) + "|"
+
+		+ "\n |" + getCurrentCellValue(square4) + "|" + getCurrentCellValue(square5) + "|"
+		+ getCurrentCellValue(square6) + "|"
+
+		+ "\n |" + getCurrentCellValue(square7) + "|" + getCurrentCellValue(square8) + "|"
+		+ getCurrentCellValue(square9) + "|\n =======";
+    }
+
+    private String getCurrentCellValue(Square square) {
+	if (xPlays.contains(square)) {
+	    return "X";
+	} else if (oPlays.contains(square)) {
+	    return "O";
+	}
+	return " ";
+    }
+
+    public void clear() {
+	xPlays.clear();
+	oPlays.clear();
+    }
+
+    public void playX(Square square) {
+	xPlays.add(square);
+	oPlays.remove(square);
+    }
+
+    public void playO(Square square) {
+	oPlays.add(square);
+	xPlays.remove(square);
+    }
+}

@@ -1,0 +1,93 @@
+package gameClient.view;
+
+public class Board {
+
+    private Square square1 = Square.ONE;
+    private Square square2 = Square.TWO;
+    private Square square3 = Square.THREE;
+    private Square square4 = Square.FOUR;
+    private Square square5 = Square.FIVE;
+    private Square square6 = Square.SIX;
+    private Square Square7 = Square.SEVEN;
+    private Square Square8 = Square.EIGHT;
+    private Square Square9 = Square.NINE;
+
+    @Override
+    public String toString() {
+
+	return "\n|" + square1 + "|" + square2 + "|" + square3 + "|" + "\n|" + square4 + "|" + square5 + "|" + square6
+		+ "|" + "\n|" + Square7 + "|" + Square8 + "|" + Square9 + "|\n";
+    }
+
+    public Square getSquare1() {
+	return square1;
+    }
+
+    public void setSquare1(Square Square1) {
+	this.square1 = Square1;
+    }
+
+    public Square getSquare2() {
+	return square2;
+    }
+
+    public void setSquare2(Square Square2) {
+	this.square2 = Square2;
+    }
+
+    public Square getSquare3() {
+	return square3;
+    }
+
+    public void setSquare3(Square Square3) {
+	this.square3 = Square3;
+    }
+
+    public Square getSquare4() {
+	return square4;
+    }
+
+    public void setSquare4(Square Square4) {
+	this.square4 = Square4;
+    }
+
+    public Square getSquare5() {
+	return square5;
+    }
+
+    public void setSquare5(Square Square5) {
+	this.square5 = Square5;
+    }
+
+    public Square getSquare6() {
+	return square6;
+    }
+
+    public void setSquare6(Square Square6) {
+	this.square6 = Square6;
+    }
+
+    public Square getSquare7() {
+	return Square7;
+    }
+
+    public void setSquare7(Square Square7) {
+	this.Square7 = Square7;
+    }
+
+    public Square getSquare8() {
+	return Square8;
+    }
+
+    public void setSquare8(Square Square8) {
+	this.Square8 = Square8;
+    }
+
+    public Square getSquare9() {
+	return Square9;
+    }
+
+    public void setSquare9(Square Square9) {
+	this.Square9 = Square9;
+    }
+}

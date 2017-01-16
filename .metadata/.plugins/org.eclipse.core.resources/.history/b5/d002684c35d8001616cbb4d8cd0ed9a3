@@ -1,0 +1,19 @@
+package gameCommon;
+
+public class PlayResult {
+
+	private String errorMessage;
+
+	public PlayResult(String message) {
+		super();
+		this.errorMessage = message;
+	}
+
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(String message) {
+		this.errorMessage = message;
+	}
+}

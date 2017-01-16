@@ -1,0 +1,58 @@
+package gameClient;
+
+import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Matchers.eq;
+import static org.mockito.Mockito.when;
+
+import java.io.ByteArrayInputStream;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+import gameCommon.GameProperties;
+import gameCommon.MarkOutcome;
+import gameCommon.MarkStatus;
+
+@RunWith(MockitoJUnitRunner.class)
+public class GameClientApplication2Test {
+
+    @Mock
+    private RestTemplate restTemplate;
+
+    @Mock
+    private ResponseEntity<MarkOutcome> responseEntity;
+
+    @InjectMocks
+    private GameClientApplication gameClientApplication;
+
+    @Test
+    public void test() throws Exception {
+
+	int gameNumber = 3;
+
+	when(restTemplate.getForObject(GameProperties.NEW_GAME_URI, Integer.class)).thenReturn(gameNumber);
+
+	when(restTemplate.postForEntity(anyString(), any(Integer.class), eq(MarkOutcome.class)))
+		.thenReturn(responseEntity);
+
+	MarkOutcome markOutcome = new MarkOutcome(MarkStatus.CONTINUE, null, null);
+	when(responseEntity.getBody()).thenReturn(markOutcome);
+
+	//
+	String squareNumberToBeSelected = "1\n2";
+	ByteArrayInputStream in = new ByteArrayInputStream(squareNumberToBeSelected.getBytes());
+
+	System.setIn(in);
+
+	String nullValue = null;
+	gameClientApplication.run(restTemplate).run(nullValue);
+
+    }
+
+}

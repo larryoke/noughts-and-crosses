@@ -1,0 +1,16 @@
+package gameClient.view;
+
+public enum Cell {
+	X, O, EMPTY;
+	
+
+	@Override
+	public String toString() {
+		if (X.equals(this)){
+			return "X";
+		}else if (O.equals(this)){
+			return "O";
+			
+		}else return "";
+	}
+}

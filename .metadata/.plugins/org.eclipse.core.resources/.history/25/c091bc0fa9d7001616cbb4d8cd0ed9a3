@@ -1,0 +1,5 @@
+package gameClient.view;
+
+public enum Player {
+
+}

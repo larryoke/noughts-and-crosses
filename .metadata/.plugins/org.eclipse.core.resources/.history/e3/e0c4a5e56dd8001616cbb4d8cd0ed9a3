@@ -1,0 +1,113 @@
+package gameService.service.impl;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+import org.springframework.stereotype.Service;
+
+import gameCommon.Play;
+import gameCommon.PlayResult;
+import gameCommon.PlayStatus;
+import gameCommon.Player;
+import gameCommon.Square;
+import gameCommon.domain.Game;
+import gameService.domain.GameFactory;
+import gameService.service.GameService;
+
+@Service
+public class GameServiceImpl implements GameService {
+
+    private static int GAME_NUMBER = 0;
+
+    private Map<Integer, Game> games = new HashMap<Integer, Game>();
+
+    @Override
+    public int initialiseNewGame() {
+	Game game = GameFactory.create(++GAME_NUMBER);
+	games.put(GAME_NUMBER, game);
+	return GAME_NUMBER;
+    }
+
+    @Override
+    public PlayResult processCurrentPlay(Play play) {
+	Game game = games.get(play.getGameID());
+	Player currentPlayer = play.getCurrentPlayer();
+	Square selectedSquare = play.getSelectedSquare();
+	if (Player.X.equals(currentPlayer)) {
+	    if (game.getxPlays().contains(selectedSquare)) {
+		return new PlayResult(PlayStatus.ERROR, null, "This square is already selected");
+
+	    } else {
+		game.playX(selectedSquare);
+
+		return processPlay(game.getxPlays());
+	    }
+
+	} else if (Player.O.equals(currentPlayer)) {
+	    if (game.getoPlays().contains(selectedSquare)) {
+		return new PlayResult(PlayStatus.ERROR, null, "This square is already selected");
+
+	    } else {
+		game.playO(selectedSquare);
+
+		return processPlay(game.getoPlays());
+	    }
+	}
+	return null;
+    }
+
+    private PlayResult processPlay(Set<Square> playerSquares) {
+	PlayStatus status = processPlayStatus(playerSquares);
+
+	if (PlayStatus.WIN.equals(status)) {
+	    return new PlayResult(status, null, null);
+
+	} else if (PlayStatus.DRAW.equals(status)) {
+	    return new PlayResult(status, null, null);
+
+	} else {
+	    return new PlayResult(PlayStatus.CONTINUE, null, null);
+	}
+    }
+
+    private PlayStatus processPlayStatus(Set<Square> playerSquares) {
+	if (playerSquares.contains(Square.ONE) && playerSquares.contains(Square.TWO)
+		&& playerSquares.contains(Square.TWO)) {
+	    return PlayStatus.WIN;
+
+	} else if (playerSquares.contains(Square.FOUR) && playerSquares.contains(Square.FIVE)
+		&& playerSquares.contains(Square.SIX)) {
+	    return PlayStatus.WIN;
+
+	} else if (playerSquares.contains(Square.SEVEN) && playerSquares.contains(Square.EIGHT)
+		&& playerSquares.contains(Square.NINE)) {
+	    return PlayStatus.WIN;
+
+	} else if (playerSquares.contains(Square.ONE) && playerSquares.contains(Square.FOUR)
+		&& playerSquares.contains(Square.SEVEN)) {
+	    return PlayStatus.WIN;
+
+	} else if (playerSquares.contains(Square.TWO) && playerSquares.contains(Square.FIVE)
+		&& playerSquares.contains(Square.EIGHT)) {
+	    return PlayStatus.WIN;
+
+	} else if (playerSquares.contains(Square.THREE) && playerSquares.contains(Square.SIX)
+		&& playerSquares.contains(Square.NINE)) {
+	    return PlayStatus.WIN;
+
+	} else if (playerSquares.contains(Square.ONE) && playerSquares.contains(Square.FIVE)
+		&& playerSquares.contains(Square.NINE)) {
+	    return PlayStatus.WIN;
+
+	} else if (playerSquares.contains(Square.THREE) && playerSquares.contains(Square.FIVE)
+		&& playerSquares.contains(Square.SEVEN)) {
+	    return PlayStatus.WIN;
+
+	} else if (playerSquares.size() == 5) {
+	    return PlayStatus.DRAW;
+	}
+	return PlayStatus.CONTINUE;
+    }
+
+}

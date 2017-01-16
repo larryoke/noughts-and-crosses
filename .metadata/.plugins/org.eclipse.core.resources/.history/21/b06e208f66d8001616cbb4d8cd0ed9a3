@@ -1,0 +1,5 @@
+package gameCommon;
+
+public enum PlayStatus {
+	ERROR, CONTINUE, END
+}

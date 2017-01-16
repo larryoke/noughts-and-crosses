@@ -1,0 +1,52 @@
+package gameCommon;
+
+import java.util.Set;
+
+public class Play {
+    private int gameID;
+    private Player currentPlayer;
+    private Set<Square> xPlays;
+    private Set<Square> oPlays ;
+    
+	public Play(){}
+    
+	public Play(int gameID, Player currentPlayer, Set<Square> xPlays, Set<Square> oPlays) {
+		super();
+		this.gameID = gameID;
+		this.currentPlayer = currentPlayer;
+		this.xPlays = xPlays;
+		this.oPlays = oPlays;
+	}
+
+	public int getGameID() {
+		return gameID;
+	}
+
+	public void setGameID(int gameID) {
+		this.gameID = gameID;
+	}
+
+	public Player getCurrentPlayer() {
+		return currentPlayer;
+	}
+
+	public void setCurrentPlayer(Player currentPlayer) {
+		this.currentPlayer = currentPlayer;
+	}
+
+	public Set<Square> getxPlays() {
+		return xPlays;
+	}
+
+	public void setxPlays(Set<Square> xPlays) {
+		this.xPlays = xPlays;
+	}
+
+	public Set<Square> getoPlays() {
+		return oPlays;
+	}
+
+	public void setoPlays(Set<Square> oPlays) {
+		this.oPlays = oPlays;
+	}
+}

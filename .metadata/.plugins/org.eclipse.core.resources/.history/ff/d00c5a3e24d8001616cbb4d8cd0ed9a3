@@ -1,0 +1,11 @@
+package gameService.service;
+
+public interface GameService {
+	
+	/**
+	 * Initialise a new game.
+	 * 
+	 * @return game id required for subsequent communication with server
+	 */
+	int initialiseNewGame();
+}

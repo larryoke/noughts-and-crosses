@@ -1,0 +1,8 @@
+package gameClient.view;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Board2 {
+    private List<Square> squares = new ArrayList<Square>();
+}

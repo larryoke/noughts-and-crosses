@@ -1,0 +1,22 @@
+package gameClient.view;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Board2 {
+    private Square squares1 = Square.EMPTY;
+    private Square squares2 = Square.EMPTY;
+    private Square squares3 = Square.EMPTY;
+    private Square squares4 = Square.EMPTY;
+    private Square squares5 = Square.EMPTY;
+    private Square squares6 = Square.EMPTY;
+    private Square squares7 = Square.EMPTY;
+    private Square squares8 = Square.EMPTY;
+    private Square squares9 = Square.EMPTY;
+
+
+    @Override
+    public String toString() {
+	
+    }
+}

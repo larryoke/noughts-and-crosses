@@ -1,0 +1,6 @@
+package gameCommon;
+
+public class Play {
+    private int gameID;
+    private Player currentPlayer;
+}

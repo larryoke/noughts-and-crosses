@@ -1,0 +1,19 @@
+package gameClient.view;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Board2 {
+    private List<Square> squares = new ArrayList<Square>();
+
+    @Override
+    public String toString() {
+	squares.stream().forEach(square -> {
+
+	});
+
+	StringBuilder builder = new StringBuilder();
+	builder.append("\n\n\n");
+	builder.append("|");
+    }
+}

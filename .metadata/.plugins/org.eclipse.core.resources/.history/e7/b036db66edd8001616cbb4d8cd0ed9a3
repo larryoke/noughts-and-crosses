@@ -1,0 +1,18 @@
+package gameService.service;
+
+import gameCommon.Mark;
+import gameCommon.PlayResult;
+
+public interface GameService {
+
+    /**
+     * Initialise a new game.
+     * 
+     * @return game id required for subsequent communication with server
+     */
+    int initialiseNewGame();
+
+    PlayResult processCurrentMark(Mark mark);
+
+    void endGame(int gameID);
+}

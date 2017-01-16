@@ -1,0 +1,14 @@
+package gameCommon;
+
+public class GameProperties {
+	public static final String NEW_GAME_URI = "http://localhost:8080/initialise";
+	
+	public static boolean isNumeric(String value){
+		for (char c : value.toCharArray()){
+			if (!Character.isDigit(c)){
+				return false;
+			}
+		}
+		return true;
+	}
+}
