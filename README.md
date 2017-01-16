@@ -27,41 +27,41 @@ Requires Maven version 3.x and Java 8 JDK
 	
 2. Process current mark
 	
-	Request
-	POST /mark 
-	Content-Type: application/json
+	Request<br />
+	POST /mark <br />
+	Content-Type: application/json<br />
 	
-	{
-		"gameID":{gameID}
-		"currentPlayer":{X|O}
-		"selectedSquare":{1..9}
-	}
+	{<br />
+		"gameID":{gameID}<br />
+		"currentPlayer":{X|O}<br />
+		"selectedSquare":{1..9}<br />
+	}<br />
 	
-	Response
-	Success
-	200 OK
-	Content-Type: application/json
+	Response<br />
+	Success<br />
+	200 OK<br />
+	Content-Type: application/json<br />
 	
-	{
-		"markStatus":{CONTINUE|WIN|DRAW}
-		"errorMessage":
-		"scroreMessage":{scoreMessage}
-	}
+	{<br />
+		"markStatus":{CONTINUE|WIN|DRAW}<br />
+		"errorMessage":<br />
+		"scroreMessage":{scoreMessage}<br />
+	}<br />
 	
-	Errors
-	400 Bad Request
-	Content-Type: application/json
-	{
-		"markStatus":ERROR
-		"errorMessage":"This square is already marked"
-		"scroreMessage":
-	}
-	If the mark square is already occupied
+	Errors<br />
+	400 Bad Request<br />
+	Content-Type: application/json<br />
+	{<br />
+		"markStatus":ERROR<br />
+		"errorMessage":"This square is already marked"<br />
+		"scroreMessage":<br />
+	}<br />
+	If the mark square is already occupied<br />
 	
 3. End game
 
-  	Request
-  	DELETE /end/{gameID} 
+  	Request<br />
+  	DELETE /end/{gameID} <br />
 
 
 ##Start Up
